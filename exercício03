@@ -1,0 +1,30 @@
+exercicio03_trabalho
+Var
+    inteiro: vHorasTrabalhadas, vValorHora, vSalarioLiquido, vSalarioBruto, Resultado;
+inicio
+    escreva("Informe a quantidade de horas trabalhadas: ");
+    ler(vHorasTrabalhadas);
+    escreva("Informe o valor recebido por hora: ");
+    ler(vValorHora);
+    vSalarioBruto ← vHorasTrabalhadas * vValorHora;
+    escreva("O salário bruto é: " + vSalarioBruto);
+        se(vSalarioBruto =< 1.903,98)entao
+        escreva("não declara imposto de renda");
+        Resultado ← vSalarioBruto - 0
+            senão
+                se(vSalarioBruto > 1.903,99 ^/v < 2.826,65);
+                escreva("o calculo de seu imposto de renda é de: R$142,80");
+                Resultado ← vSalarioBruto - 142,80
+                    senão
+                        se(vSalarioBruto > 2.826,66 ^/v < 3.751,05);
+                        escreva("o calculo de seu imposto de renda é de: R$354,80");
+                        Resultado ← vSalarioBruto - 354,80
+                            senão
+                                se(vSalarioBruto > 3.751,06 ^/v < 4.664,68);
+                                escreva("o calculo de seu imposto de renda é de: R$636,13");
+                                Resultado ← vSalarioBruto - 636,13
+                                    senão
+                                        se(vSalarioBruto > 4.664,69);
+                                        escreva("o calculo de seu imposto de renda é de: R$869,36");
+                                        Resultado ← vSalarioBruto - 869,36
+fim.
