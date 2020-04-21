@@ -1,0 +1,38 @@
+Var
+    inteiro: var1, C, D, U, Resultado;
+
+Inicio
+
+    escreva("Digite o numero inteiro: ");
+    ler: (var1);
+
+    se( var1 > 1000 ou var1 = 0 entao
+        escreva("Número digitado incorreto. Digite um valor entre 1 e 1000")
+    senao
+            se( var1 > 100 entao
+                C ← var1 div 100
+                escreva("A Quantidade de Centenas é: " + C);
+                Resultado ← var1 mod 100
+            senao
+                Resultado = var1
+                    e
+            fimse;
+        )
+
+        se( Resultado > 10 entao 
+            D ← Resultado div 10
+            escreva( "A quantidade de Dezenas é: " + D);
+            Resultado ← var1 mod 10
+        senao
+            Resultado = var1
+        fimse;
+        )
+
+        se( Resultado > 1 
+            U ← Resultado div 1
+            escreva( "A quantidade de Unidades é: " + U);
+        )
+
+        fimse;
+    fimse;
+Fim.
