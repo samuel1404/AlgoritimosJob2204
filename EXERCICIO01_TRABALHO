@@ -1,0 +1,49 @@
+Var
+    inteiro: v_saque, C, resto, notas;
+
+Inicio
+    imprima("Digite o valor para o saque:");
+    leia(v_saque);
+
+    se(v_saque < 10) e (v_saque > 600) entao
+        imprima("Valor do saque inválido, permitido apenas saques entre R$10 e R$600");
+    fimse;
+
+    notas ← v_saque div 100;
+    
+    se(notas >= 1) entao
+        imprima("Seu saque terá: " + notas + "NOTAS DE R$100");
+        resto ← v_saque mod 100;
+    fimse;
+
+    se(resto >= 50) entao
+        notas ← resto div 50;
+        imprima("Seu saque terá: " + notas + "NOTAS DE R$50");
+        resto ← resto mod 50;
+    fimse;
+
+    se(resto >= 20) entao
+        notas ← resto div 20;
+        imprima("Seu saque terá: " + notas + "NOTAS DE R$20");
+        resto ← resto mod 20;
+    fimse;
+
+    se(resto >= 10) entao
+        notas ← resto div 10;
+        imprima("Seu saque terá: " + notas + "NOTAS DE R$10");
+        resto ← resto mod 10;
+    fimse;
+
+    se(resto >= 5) entao
+        notas ← resto div 5;
+        imprima("Seu saque terá: " + notas + "NOTAS DE R$5");
+        resto ← resto mod 5;
+    fimse;
+
+    se(resto >= 1) entao
+        notas ← resto div 1;
+        imprima("Seu saque terá: " + notas + "NOTAS DE R$1");
+        resto ← resto mod 1;
+    fimse;
+
+Fim.
